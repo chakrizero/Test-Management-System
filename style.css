@@ -1,0 +1,198 @@
+/* Light Mode Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Moving border effect for task items */
+@keyframes borderAnimation {
+    0% { border-color: #ff5f6d; }
+    25% { border-color: #ffc371; }
+    50% { border-color: #ff7f50; }
+    75% { border-color: #ffcc00; }
+    100% { border-color: #ff5f6d; }
+}
+
+.task-input, .task-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid;
+    animation: borderAnimation 5s linear infinite;
+    transition: background-color 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+}
+
+button.complete-btn {
+    background-color: #ffc107;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.complete-btn.completed {
+    background-color: #28a745;
+    color: white;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+button.update-btn {
+    background-color: #17a2b8;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+h1.dark-mode {
+    color: #ffffff; /* Change heading color to white */
+}
+
+input[type="text"].dark-mode {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ...other dark mode styles... */
+
+button.btn.dark-mode {
+    background-color: #555;
+}
+
+button.btn.dark-mode:hover {
+    background-color: #444;
+}
+
+li.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+button.complete-btn.dark-mode {
+    background-color: #555;
+}
+
+button.update-btn.dark-mode {
+    background-color: #007bff;
+}
+
+button.delete-btn.dark-mode {
+    background-color: #dc3545;
+}
+
+/* Clear All Button Style */
+button.clear-btn {
+    background-color: #dc3545; /* Red color for clear button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+button.clear-btn:hover {
+    background-color: #c82333;
+}
+
+/* Dark Mode Clear All Button */
+button.clear-btn.dark-mode {
+    background-color: #ff5555;
+}
+
+button.clear-btn.mode:hover {
+    background-color: #ff3333;
+}
